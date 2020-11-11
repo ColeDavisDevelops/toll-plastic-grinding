@@ -1,0 +1,23 @@
+.container {
+  background-color: antiquewhite;
+}
+
+.nav-bar {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  top: 0px;
+  background-color: gray;
+  display: flex;
+}
+
+.logo {
+  padding: 10px;
+  margin: auto;
+  flex-grow: 1;
+}
+
+.nav-item {
+  margin: auto;
+  padding-left: 5%;
+}
