@@ -3,12 +3,19 @@
 }
 
 .nav-bar {
-  position: absolute;
+  display: flex;
+  position: fixed;
   width: 100%;
   z-index: 1;
   top: 0px;
-  background-color: gray;
-  display: flex;
+}
+
+.nav-bar > h1 {
+  color: white;
+}
+
+.nav-bar > h2 {
+  color: white;
 }
 
 .logo {
@@ -19,5 +26,5 @@
 
 .nav-item {
   margin: auto;
-  padding-left: 5%;
+  padding-right: 20px;
 }

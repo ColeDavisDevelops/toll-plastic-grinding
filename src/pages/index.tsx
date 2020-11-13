@@ -1,14 +1,13 @@
 import React from "react"
 import { PageProps, graphql } from "gatsby"
 import Layout from "../components/layout"
-import Img from "gatsby-image"
+import HeroBanner from "../components/heroBanner"
 
-const IndexRoute: React.FC = (props: PageProps) => {
-  const data: any = props.data
-  const fluid = data.file.childImageSharp.fluid
+const IndexRoute: React.FC<PageProps> = ({ data }) => {
+  const d: any = data
   return (
     <Layout>
-      <Img fluid={fluid} alt="processed plastic" />
+      <HeroBanner fluid={d.file.childImageSharp.fluid} />
     </Layout>
   )
 }
@@ -25,4 +24,5 @@ export const query = graphql`
     }
   }
 `
+
 export default IndexRoute
