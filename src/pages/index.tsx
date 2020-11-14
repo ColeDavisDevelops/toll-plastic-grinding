@@ -1,16 +1,19 @@
-import React from "react"
-import { PageProps, graphql } from "gatsby"
-import Layout from "../components/layout"
-import HeroBanner from "../components/heroBanner"
+import React from "react";
+import { PageProps, graphql } from "gatsby";
+// COMPONENTS
+import Layout from "../components/layout";
+import HeroBanner from "../components/heroBanner";
+import Services from "../components/services";
 
 const IndexRoute: React.FC<PageProps> = ({ data }) => {
-  const d: any = data
+  const d: any = data;
   return (
     <Layout>
       <HeroBanner fluid={d.file.childImageSharp.fluid} />
+      <Services />
     </Layout>
-  )
-}
+  );
+};
 
 export const query = graphql`
   query MyQuery {
@@ -23,6 +26,6 @@ export const query = graphql`
       }
     }
   }
-`
+`;
 
-export default IndexRoute
+export default IndexRoute;
