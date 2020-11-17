@@ -2,15 +2,29 @@ import React from "react";
 import { PageProps, graphql } from "gatsby";
 // COMPONENTS
 import Layout from "../components/layout";
-import HeroBanner from "../components/heroBanner";
-import Services from "../components/services";
+import HeroBanner from "../components/hero-banner";
+import ServiceCard from "../components/service-card";
+import { FluidObject } from "gatsby-image";
 
-const IndexRoute: React.FC<PageProps> = ({ data }) => {
-  const d: any = data;
+interface childImageSharp {
+  fluid: FluidObject;
+}
+
+interface file {
+  childImageSharp: childImageSharp;
+}
+
+interface data {
+  file: file;
+}
+
+type indexProps = PageProps<data>;
+
+const IndexRoute: React.FC<indexProps> = ({ data }) => {
   return (
     <Layout>
-      <HeroBanner fluid={d.file.childImageSharp.fluid} />
-      <Services />
+      <HeroBanner fluid={data.file.childImageSharp.fluid} />
+      <ServiceCard title={"Shredding & Grinding"} fluid={} />
     </Layout>
   );
 };
