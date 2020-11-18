@@ -12,11 +12,9 @@ const Services: React.FC<serviceProps> = ({ title, fluid }) => {
     <>
       <h1 className={styles.title}>Our Services</h1>
       <hr />
-
       <div className={styles.servicesContainer}>
-        <div>
-          <h2>Shredding & Grinding</h2>
-        </div>
+        <h2>{title}</h2>
+        <Img alt="" fluid={fluid} />
       </div>
     </>
   );

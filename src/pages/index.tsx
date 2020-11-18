@@ -14,26 +14,57 @@ interface file {
   childImageSharp: childImageSharp;
 }
 
+interface Edge {
+  node: {
+    childImageSharp: childImageSharp;
+  };
+}
+
+interface AllFile {
+  edges: Array<Edge>;
+}
+
 interface data {
   file: file;
+  allFile: AllFile;
 }
 
 type indexProps = PageProps<data>;
 
 const IndexRoute: React.FC<indexProps> = ({ data }) => {
+  const heroFluid = data.file.childImageSharp.fluid;
+  const serviceFluids = data.allFile.edges.reduce((hash, edge, counter) => {
+    hash[counter] = edge.node.childImageSharp.fluid;
+    return hash;
+  }, {});
+
+  console.log(serviceFluids);
+
   return (
     <Layout>
-      <HeroBanner fluid={data.file.childImageSharp.fluid} />
-      <ServiceCard title={"Shredding & Grinding"} fluid={} />
+      <HeroBanner fluid={heroFluid} />
+      {/* {serviceFluids.map(fluid => (
+        <ServiceCard title="t" fluid={fluid} />
+      ))} */}
     </Layout>
   );
 };
 
 export const query = graphql`
-  query MyQuery {
-    file(relativePath: { eq: "images/plastic.png" }) {
+  query IndexQuery {
+    allFile(filter: { relativeDirectory: { eq: "images/services" } }) {
+      edges {
+        node {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    }
+    file(relativePath: { eq: "images/hero.png" }) {
       childImageSharp {
-        # Specify the image processing specifications right in the query.
         fluid {
           ...GatsbyImageSharpFluid
         }
