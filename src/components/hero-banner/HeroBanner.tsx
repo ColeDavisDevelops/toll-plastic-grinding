@@ -1,12 +1,34 @@
 import React, { CSSProperties } from "react";
 import styles from "./heroBanner.module.css";
 import Img, { FluidObject } from "gatsby-image";
+import { useStaticQuery, graphql } from "gatsby";
 
-interface heroProps {
+interface childImageSharp {
   fluid: FluidObject;
 }
 
-const HeroBanner: React.FC<heroProps> = ({ fluid }) => {
+interface file {
+  childImageSharp: childImageSharp;
+}
+
+interface data {
+  file: file;
+}
+
+const HeroBanner: React.FC = () => {
+  const data: data = useStaticQuery(graphql`
+    query HeroQuery {
+      file(relativePath: { eq: "images/hero.png" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `);
+  const fluid = data.file.childImageSharp.fluid;
+
   return (
     <div className={styles.container}>
       <Img className={styles.image} fluid={fluid} alt="processed plastic" />
