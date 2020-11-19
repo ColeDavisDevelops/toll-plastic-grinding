@@ -1,0 +1,29 @@
+@media only screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+    /* -webkit-clip-path: polygon(0 0%, 100% 0, 100% 95%, 0% 100%);
+    clip-path: polygon(0 0%, 100% 0, 100% 95%, 0% 100%); */
+    top: 0px;
+  }
+
+  .image {
+    height: 100vh;
+  }
+
+  .text-container {
+    position: absolute;
+    width: 100%;
+    color: white;
+    font-weight: 900;
+    top: 40vh;
+    text-align: center;
+  }
+
+  .text-container > h1 {
+    font-size: 40px;
+  }
+
+  .text-container > h2 {
+    font-size: 20px;
+  }
+}

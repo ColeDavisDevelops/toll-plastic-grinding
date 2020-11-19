@@ -2,9 +2,16 @@ import React from "react";
 import styles from "./services.module.css";
 import Img, { FluidObject } from "gatsby-image";
 import { useStaticQuery, graphql } from "gatsby";
+import { data } from "../../types/data";
+
+interface serviceData {
+  title: string;
+  description: string;
+  fluid: FluidObject;
+}
 
 const Services: React.FC = () => {
-  const services = [
+  const serviceData: Array<serviceData> = [
     {
       title: "Shredding & Grinding",
       description:
@@ -19,7 +26,7 @@ const Services: React.FC = () => {
     },
   ];
 
-  const data = useStaticQuery(graphql`
+  const data: data = useStaticQuery(graphql`
     query ServiceQuery {
       allFile(filter: { relativeDirectory: { eq: "images/services" } }) {
         edges {
@@ -34,17 +41,16 @@ const Services: React.FC = () => {
       }
     }
   `);
-
   data.allFile.edges.forEach((edge, idx) => {
-    services[idx].fluid = edge.node.childImageSharp.fluid;
+    serviceData[idx].fluid = edge.node.childImageSharp.fluid;
   });
 
   return (
     <>
       <h1>Our Services</h1>
       <hr />
-      {services.map(({ title, description, fluid }) => (
-        <div className={styles.servicesContainer}>
+      {serviceData.map(({ title, description, fluid }) => (
+        <div className={styles.servicesContainer} key={title}>
           <h2>{title}</h2>
           <Img alt={title} fluid={fluid} />
           <p>{description}</p>

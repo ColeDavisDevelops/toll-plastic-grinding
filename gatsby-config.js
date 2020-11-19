@@ -8,6 +8,7 @@ module.exports = {
   /* Your site config here */
   plugins: [
     `gatsby-transformer-typescript-css-modules`,
+    `gatsby-plugin-sass`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     {
@@ -17,4 +18,4 @@ module.exports = {
       },
     },
   ],
-}
+};

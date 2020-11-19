@@ -1,19 +1,8 @@
-import React, { CSSProperties } from "react";
+import React from "react";
 import styles from "./heroBanner.module.css";
 import Img, { FluidObject } from "gatsby-image";
 import { useStaticQuery, graphql } from "gatsby";
-
-interface childImageSharp {
-  fluid: FluidObject;
-}
-
-interface file {
-  childImageSharp: childImageSharp;
-}
-
-interface data {
-  file: file;
-}
+import { data } from "../../types/data";
 
 const HeroBanner: React.FC = () => {
   const data: data = useStaticQuery(graphql`

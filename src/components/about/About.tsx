@@ -1,10 +1,28 @@
 import React from "react";
+import styles from "./about.module.css";
+import { useStaticQuery, graphql } from "gatsby";
+import Img from "gatsby-image";
+import { data } from "../../types/data";
 
 const About = () => {
+  const data: data = useStaticQuery(graphql`
+    query AboutQuery {
+      file(relativePath: { eq: "images/about.jpg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
+    }
+  `);
+  const fluid = data.file.childImageSharp.fluid;
+
   return (
-    <>
-      <h1>Experts of our Craft</h1>
+    <div className={styles.container}>
+      <h1>Proven Performance</h1>
       <hr />
+      <Img alt="" fluid={fluid} />
       <div>
         <ul>
           <li>Thirty Years of industry experience</li>
@@ -13,7 +31,7 @@ const About = () => {
           <li>Thirty Years of industry experience</li>
         </ul>
       </div>
-    </>
+    </div>
   );
 };
 
