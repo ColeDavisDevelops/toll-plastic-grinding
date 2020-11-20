@@ -1,12 +1,11 @@
 import React from "react";
+import styles from "./gallery.module.css";
 import Carousel from "react-bootstrap/Carousel";
 import { useStaticQuery, graphql } from "gatsby";
 import Img, { FluidObject } from "gatsby-image";
 import { data } from "../../types/data";
 
 interface galleryDataNode {
-  label: string;
-  description: string;
   imgAlt: string;
   fluid: FluidObject;
 }
@@ -14,32 +13,22 @@ interface galleryDataNode {
 const Gallery: React.FC = () => {
   const galleryData: Array<galleryDataNode> = [
     {
-      label: "imageOne",
-      description: "imageOneDescription",
       imgAlt: "imageOne",
       fluid: null,
     },
     {
-      label: "imageOne",
-      description: "imageOneDescription",
       imgAlt: "imageOne",
       fluid: null,
     },
     {
-      label: "imageOne",
-      description: "imageOneDescription",
       imgAlt: "imageOne",
       fluid: null,
     },
     {
-      label: "imageOne",
-      description: "imageOneDescription",
       imgAlt: "imageOne",
       fluid: null,
     },
     {
-      label: "imageOne",
-      description: "imageOneDescription",
       imgAlt: "imageOne",
       fluid: null,
     },
@@ -65,18 +54,12 @@ const Gallery: React.FC = () => {
   console.log(galleryData);
 
   return (
-    <Carousel>
-      {galleryData.map(
-        ({ label, description, imgAlt, fluid }: galleryDataNode) => (
-          <Carousel.Item interval={1000}>
-            <Img fluid={fluid} alt={imgAlt} />
-            <Carousel.Caption>
-              <h3>{label}</h3>
-              <p>{description}</p>
-            </Carousel.Caption>
-          </Carousel.Item>
-        )
-      )}
+    <Carousel className={styles.container}>
+      {galleryData.map(({ imgAlt, fluid }: galleryDataNode) => (
+        <Carousel.Item interval={1000}>
+          <Img fluid={fluid} alt={imgAlt} />
+        </Carousel.Item>
+      ))}
     </Carousel>
   );
 };
