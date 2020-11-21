@@ -1,12 +1,11 @@
 import React from "react";
-
 // COMPONENTS
 import Layout from "../components/layout";
 import HeroBanner from "../components/hero-banner";
 import Services from "../components/services";
 import About from "../components/about";
 import Gallery from "../components/gallery";
-import { Container, Card } from "react-bootstrap";
+import Contact from "../components/contact";
 
 const IndexRoute: React.FC = () => {
   return (
@@ -14,14 +13,8 @@ const IndexRoute: React.FC = () => {
       <HeroBanner />
       <Services />
       <About />
-      <Container>
-        <Card>
-          <Card.Body>
-            <Card.Title>testing</Card.Title>
-          </Card.Body>
-        </Card>
-      </Container>
       <Gallery />
+      <Contact />
     </Layout>
   );
 };
