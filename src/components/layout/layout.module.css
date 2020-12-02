@@ -1,16 +1,25 @@
 @media only screen and (max-width: 768px) {
   .nav-bar {
-    background: transparent;
+    height: 70px;
     display: flex;
     position: fixed;
     width: 100%;
     z-index: 1;
     top: 0px;
+    transition: height 0.5s;
   }
 
-  .nav-bar.scroll {
-    background-color: black;
+  .nav-bar.showing {
+    background: black;
     opacity: 0.5;
+  }
+
+  .nav-bar.hidden {
+    height: 0px;
+  }
+
+  .nav-bar.transparent {
+    background: transparent;
   }
 
   .nav-bar > h1 {
