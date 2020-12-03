@@ -1,9 +1,15 @@
 @media only screen and (max-width: 768px) {
   .container {
     width: 100%;
+    margin: 0px;
+    padding: 0px 10px 0px 10px;
     /* -webkit-clip-path: polygon(0 0%, 100% 0, 100% 95%, 0% 100%);
     clip-path: polygon(0 0%, 100% 0, 100% 95%, 0% 100%); */
     top: 0px;
+  }
+
+  .title {
+    text-align: center;
   }
 
   .image {
@@ -25,5 +31,14 @@
 
   .text-container > h2 {
     font-size: 20px;
+  }
+
+  .shredded-image {
+    height: 200px;
+  }
+
+  .bullet-title {
+    color: rgb(20, 179, 20);
+    font-weight: bolder;
   }
 }

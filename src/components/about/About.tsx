@@ -20,16 +20,42 @@ const About = () => {
 
   return (
     <div className={styles.container}>
-      <h1>Proven Performance</h1>
+      <h1 className={styles.title}>Proven Performance</h1>
       <hr />
-      <Img alt="" fluid={fluid} />
+      {/* <Img
+        className={styles.shreddedImage}
+        alt="plastic shredded densified"
+        fluid={fluid}
+      /> */}
       <div>
-        <ul>
-          <li>Thirty Years of industry experience</li>
-          <li>Thirty Years of industry experience</li>
-          <li>Thirty Years of industry experience</li>
-          <li>Thirty Years of industry experience</li>
-        </ul>
+        <h4 className={styles.bulletTitle}>
+          Thirty years of industry experience
+        </h4>
+        <p>
+          We have thirty years of industry experience. We have thirty years of
+          industry experience. We have thirty years of industry experience. We
+          have thirty years of industry experience. We have thirty years of
+        </p>
+      </div>
+      <div>
+        <h4 className={styles.bulletTitle}>
+          Thirty years of industry experience
+        </h4>
+        <p>
+          We have thirty years of industry experience. We have thirty years of
+          industry experience. We have thirty years of industry experience. We
+          have thirty years of industry experience. We have thirty years of
+        </p>
+      </div>
+      <div>
+        <h4 className={styles.bulletTitle}>
+          Thirty years of industry experience
+        </h4>
+        <p>
+          We have thirty years of industry experience. We have thirty years of
+          industry experience. We have thirty years of industry experience. We
+          have thirty years of industry experience. We have thirty years of
+        </p>
       </div>
     </div>
   );

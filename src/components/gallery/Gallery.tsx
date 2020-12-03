@@ -54,13 +54,15 @@ const Gallery: React.FC = () => {
   console.log(galleryData);
 
   return (
-    <Carousel className={styles.container}>
-      {galleryData.map(({ imgAlt, fluid }: galleryDataNode) => (
-        <Carousel.Item interval={1000}>
-          <Img fluid={fluid} alt={imgAlt} />
-        </Carousel.Item>
-      ))}
-    </Carousel>
+    <div className={styles.container}>
+      <Carousel>
+        {galleryData.map(({ imgAlt, fluid }: galleryDataNode) => (
+          <Carousel.Item interval={1000}>
+            <Img fluid={fluid} alt={imgAlt} />
+          </Carousel.Item>
+        ))}
+      </Carousel>
+    </div>
   );
 };
 

@@ -1,0 +1,17 @@
+.container {
+  padding: 0px 10px 0px 10px;
+}
+
+.title {
+  text-align: center;
+}
+
+.info-title {
+  font-weight: 900;
+}
+
+.button {
+  width: 100%;
+  margin-bottom: 20px;
+  background-color: blue;
+}

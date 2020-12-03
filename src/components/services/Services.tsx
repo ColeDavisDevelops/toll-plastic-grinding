@@ -41,22 +41,25 @@ const Services: React.FC = () => {
       }
     }
   `);
+
   data.allFile.edges.forEach((edge, idx) => {
     serviceData[idx].fluid = edge.node.childImageSharp.fluid;
   });
 
   return (
-    <>
-      <h1>Our Services</h1>
+    <div className={styles.container}>
+      <h1 className={styles.title}>Toll Services</h1>
       <hr />
       {serviceData.map(({ title, description, fluid }) => (
-        <div className={styles.servicesContainer} key={title}>
-          <h2>{title}</h2>
+        <div key={title} className={styles.servicesContainer}>
           <Img alt={title} fluid={fluid} />
-          <p>{description}</p>
+          <h2>{title}</h2>
+          <div className={styles.description}>
+            <p>{description}</p>
+          </div>
         </div>
       ))}
-    </>
+    </div>
   );
 };
 

@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "./contact.module.css";
 import { BsFillPersonFill } from "react-icons/bs";
 import { FaBuilding } from "react-icons/fa";
 import { MdEmail, MdPhone } from "react-icons/md";
@@ -9,18 +10,19 @@ import InputGroup from "react-bootstrap/InputGroup";
 
 const Contact: React.FC = () => {
   return (
-    <div>
-      <h1>Contact Us</h1>
+    <div className={styles.container}>
+      <h1 className={styles.title}>Contact Us</h1>
+      <p>Toll services, Shredding, Grinding, Densifying, Pelletizing</p>
       <div>
-        <h6>Address</h6>
+        <h6 className={styles.infoTitle}>Address</h6>
         <p>7419 Avenue O. Houston, Texas 77011</p>
       </div>
       <div>
-        <h6>Phone</h6>
+        <h6 className={styles.infoTitle}>Phone</h6>
         <p>713-875-8695</p>
       </div>
       <div>
-        <h6>Email</h6>
+        <h6 className={styles.infoTitle}>Email</h6>
         <p>MikeDavis@gulfcoastscrap.com</p>
       </div>
       <Form>
@@ -78,7 +80,7 @@ const Contact: React.FC = () => {
             />
           </InputGroup>
         </Form.Group>
-        <Button variant="primary" type="submit">
+        <Button className={styles.button} variant="primary" type="submit">
           Submit
         </Button>
       </Form>

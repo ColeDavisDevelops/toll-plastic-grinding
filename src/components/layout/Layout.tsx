@@ -58,8 +58,11 @@ const Layout: React.FC = ({ children }: PageProps) => {
         </div>
       ) : null}
       <div>{children}</div>
-      <div>
-        <h6>footer</h6>
+      <div className={styles.footer}>
+        <h5>Link</h5>
+        <h5>Link</h5>
+        <h5>Link</h5>
+        <h5>Link</h5>
       </div>
     </div>
   );

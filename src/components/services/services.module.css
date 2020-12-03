@@ -1,10 +1,24 @@
+h2 {
+  padding: 10px;
+}
+
 @media only screen and (max-width: 768px) {
+  .container {
+    padding: 40px 10px 10px;
+  }
+
   .title {
     text-align: center;
-    font-size: 30px;
     margin-bottom: 0px;
   }
 
   .services-container {
+    border: 1px solid black;
+    margin-top: 20px;
+    margin-bottom: 15px;
+  }
+
+  .description {
+    padding: 0px 10px 0px 10px;
   }
 }

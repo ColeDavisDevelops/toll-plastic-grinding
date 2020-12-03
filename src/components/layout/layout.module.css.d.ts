@@ -3,6 +3,7 @@ export const showing: string;
 export const hidden: string;
 export const transparent: string;
 export const logo: string;
+export const footer: string;
 export const menuIcon: string;
 export const open: string;
 export const sidenav: string;
