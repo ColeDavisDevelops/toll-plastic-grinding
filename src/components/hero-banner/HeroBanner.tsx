@@ -27,7 +27,9 @@ const HeroBanner: React.FC = () => {
           We have over 20 years of experience shredding, grinding, and
           pelletizing plastic.
         </h2>
+        <button className={styles.button}>CONTACT US</button>
       </div>
+      <div className={styles.iconScroll}></div>
     </div>
   );
 };

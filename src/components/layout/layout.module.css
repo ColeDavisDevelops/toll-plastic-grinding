@@ -38,11 +38,13 @@
 
   .footer {
     padding: 20px;
+    text-align: center;
     background-color: black;
     color: white;
   }
 
   #menu-icon {
+    z-index: 3;
     width: 60px;
     position: absolute;
     margin: 10px;
@@ -154,14 +156,15 @@
     z-index: -1;
     top: 0;
     right: 0;
-    background-color: #111;
+    background-color: black;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
+    opacity: 0.9;
   }
 
   .sidenav.active {
-    width: 250px;
+    width: 100%;
   }
 
   .sidenav a {
