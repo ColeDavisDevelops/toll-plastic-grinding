@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./contact.module.css";
 import { BsFillPersonFill } from "react-icons/bs";
 import { FaBuilding } from "react-icons/fa";
@@ -8,7 +8,36 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import InputGroup from "react-bootstrap/InputGroup";
 
+interface formState {
+  name: string;
+  email: string;
+  phone: string;
+  company: string;
+  message: string;
+}
+
 const Contact: React.FC = () => {
+  const [formState, setFormState] = useState<formState>({
+    name: "",
+    email: "",
+    phone: "",
+    company: "",
+    message: "",
+  });
+
+  const handleChange = e => {
+    setFormState({
+      ...formState,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  const handleSubmit = e => {
+    e.preventDefault();
+  };
+
+  console.log(formState);
+
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>Contact Us</h1>
@@ -26,6 +55,8 @@ const Contact: React.FC = () => {
         <p>MikeDavis@gulfcoastscrap.com</p>
       </div>
       <Form name="contact" method="POST" data-netlify="true">
+        <input type="hidden" name="contact" value="contact" />
+
         <Form.Group controlId="formBasicName">
           <InputGroup>
             <InputGroup.Prepend>
@@ -33,7 +64,12 @@ const Contact: React.FC = () => {
                 <BsFillPersonFill />
               </InputGroup.Text>
             </InputGroup.Prepend>
-            <Form.Control type="name" placeholder="Full Name" />
+            <Form.Control
+              name="name"
+              type="name"
+              placeholder="Full Name"
+              onChange={handleChange}
+            />
           </InputGroup>
         </Form.Group>
         <Form.Group controlId="formBasicEmail">
@@ -43,7 +79,12 @@ const Contact: React.FC = () => {
                 <MdEmail />
               </InputGroup.Text>
             </InputGroup.Prepend>
-            <Form.Control type="email" placeholder="email@address.com" />
+            <Form.Control
+              name="email"
+              type="email"
+              placeholder="email@address.com"
+              onChange={handleChange}
+            />
           </InputGroup>
         </Form.Group>
         <Form.Group controlId="formBasicPhone">
@@ -53,7 +94,12 @@ const Contact: React.FC = () => {
                 <MdPhone />
               </InputGroup.Text>
             </InputGroup.Prepend>
-            <Form.Control type="phone" placeholder="123-456-7890" />
+            <Form.Control
+              name="phone"
+              type="phone"
+              placeholder="123-456-7890"
+              onChange={handleChange}
+            />
           </InputGroup>
         </Form.Group>
         <Form.Group controlId="formBasicCompany">
@@ -63,7 +109,12 @@ const Contact: React.FC = () => {
                 <FaBuilding />
               </InputGroup.Text>
             </InputGroup.Prepend>
-            <Form.Control type="company" placeholder="Company Name" />
+            <Form.Control
+              name="company"
+              type="company"
+              placeholder="Company Name"
+              onChange={handleChange}
+            />
           </InputGroup>
         </Form.Group>
         <Form.Group controlId="formBasicMessage">
@@ -75,8 +126,10 @@ const Contact: React.FC = () => {
             </InputGroup.Prepend>
             <Form.Control
               as="textarea"
+              name="message"
               type="message"
               placeholder="How may we help?"
+              onChange={handleChange}
             />
           </InputGroup>
         </Form.Group>
