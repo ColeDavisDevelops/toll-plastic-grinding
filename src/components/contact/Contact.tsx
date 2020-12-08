@@ -25,7 +25,7 @@ const Contact: React.FC = () => {
         <h6 className={styles.infoTitle}>Email</h6>
         <p>MikeDavis@gulfcoastscrap.com</p>
       </div>
-      <Form>
+      <Form name="contact" method="POST" data-netlify="true">
         <Form.Group controlId="formBasicName">
           <InputGroup>
             <InputGroup.Prepend>
