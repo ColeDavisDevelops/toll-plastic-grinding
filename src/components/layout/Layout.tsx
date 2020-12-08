@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { PageProps, Link } from "gatsby";
-import { RiRecycleLine } from "react-icons/ri";
 import styles from "./layout.module.css";
 
 const Layout: React.FC = ({ children }: PageProps) => {
