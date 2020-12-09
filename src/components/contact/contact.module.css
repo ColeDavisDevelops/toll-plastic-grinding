@@ -1,5 +1,6 @@
 .container {
-  padding: 0px 10px 0px 10px;
+  padding: 40px 10px 0px 10px;
+  background: rgb(224, 224, 224);
 }
 
 .title {
@@ -12,6 +13,24 @@
 
 .button {
   width: 100%;
+  padding: 5px;
+  border-radius: 0.25rem;
+  border-color: black;
   margin-bottom: 20px;
-  background-color: blue;
+  background-color: black;
+  color: white;
+}
+
+.button:hover {
+  background-color: white;
+  color: black;
+}
+
+.button:active {
+  background-color: white;
+  color: black;
+}
+
+.input:focus {
+  box-shadow: 0 0 0 2px rgb(130, 207, 15);
 }

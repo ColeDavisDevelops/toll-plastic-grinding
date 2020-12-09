@@ -51,7 +51,6 @@ const Gallery: React.FC = () => {
   data.allFile.edges.forEach((edge, idx) => {
     galleryData[idx].fluid = edge.node.childImageSharp.fluid;
   });
-  console.log(galleryData);
 
   return (
     <div id="gallery" className={styles.container}>

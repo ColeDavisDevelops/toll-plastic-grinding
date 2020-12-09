@@ -2,12 +2,13 @@
   .container {
     width: 100%;
     margin: 0px;
-    padding: 0px 10px 0px 10px;
+    background: rgb(130, 207, 15);
+    padding: 40px 10px 10px 10px;
+
     /* -webkit-clip-path: polygon(0 0%, 100% 0, 100% 95%, 0% 100%);
     clip-path: polygon(0 0%, 100% 0, 100% 95%, 0% 100%); */
     top: 0px;
   }
-
   .title {
     text-align: center;
   }
@@ -38,7 +39,7 @@
   }
 
   .bullet-title {
-    color: rgb(20, 179, 20);
+    color: black;
     font-weight: bolder;
   }
 }

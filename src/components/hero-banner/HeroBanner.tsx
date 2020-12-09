@@ -22,8 +22,10 @@ const HeroBanner: React.FC = () => {
     <div className={styles.container}>
       <Img className={styles.image} fluid={fluid} alt="processed plastic" />
       <div className={styles.textContainer}>
-        <h1>Plastic Grinding, Shredding & Pelletizing Services</h1>
-        <h2>
+        <h1 className={styles.title}>
+          Plastic Grinding, Shredding & Pelletizing Services
+        </h1>
+        <h2 className={styles.subTitle}>
           We have over 20 years of experience shredding, grinding, and
           pelletizing plastic.
         </h2>

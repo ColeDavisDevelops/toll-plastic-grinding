@@ -6,6 +6,16 @@
     top: 0px;
   }
 
+  .title {
+    color: white;
+  }
+
+  .sub-title {
+    font-family: Courier New, monospace;
+    color: white;
+    font-weight: 800;
+  }
+
   .image {
     height: 100vh;
   }
