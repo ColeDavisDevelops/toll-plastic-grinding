@@ -1,16 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./contact.module.css";
 import { BsFillPersonFill } from "react-icons/bs";
 import { FaBuilding } from "react-icons/fa";
 import { MdEmail, MdPhone } from "react-icons/md";
 import { RiMessage2Fill } from "react-icons/ri";
 import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
 import InputGroup from "react-bootstrap/InputGroup";
 
 const Contact: React.FC = () => {
   return (
-    <div className={styles.container}>
+    <div id="contact" className={styles.container}>
       <h1 className={styles.title}>Contact Us</h1>
       <hr />
       <div>

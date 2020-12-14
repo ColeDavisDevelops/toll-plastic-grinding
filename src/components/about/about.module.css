@@ -1,45 +1,40 @@
-@media only screen and (max-width: 768px) {
-  .container {
-    width: 100%;
-    margin: 0px;
-    background: rgb(130, 207, 15);
-    padding: 40px 10px 10px 10px;
+.container {
+  width: 100%;
+  margin: 0px;
+  background: rgb(130, 207, 15);
+  padding: 40px 10px 10px 10px;
 
-    /* -webkit-clip-path: polygon(0 0%, 100% 0, 100% 95%, 0% 100%);
+  /* -webkit-clip-path: polygon(0 0%, 100% 0, 100% 95%, 0% 100%);
     clip-path: polygon(0 0%, 100% 0, 100% 95%, 0% 100%); */
-    top: 0px;
-  }
-  .title {
-    text-align: center;
-  }
+  top: 0px;
+}
+.title {
+  text-align: center;
+}
 
-  .image {
-    height: 100vh;
+.image {
+  height: 100vh;
+}
+
+.shredded-image {
+  height: 200px;
+}
+
+.bullet-title {
+  color: black;
+  font-weight: bolder;
+}
+
+@media screen and (min-width: 720px) {
+  .container {
+    min-height: 800px;
   }
 
   .text-container {
-    position: absolute;
-    width: 100%;
-    color: white;
-    font-weight: 900;
-    top: 40vh;
-    text-align: center;
+    width: 40%;
+    margin: auto;
   }
-
-  .text-container > h1 {
-    font-size: 40px;
-  }
-
-  .text-container > h2 {
-    font-size: 20px;
-  }
-
-  .shredded-image {
-    height: 200px;
-  }
-
-  .bullet-title {
-    color: black;
-    font-weight: bolder;
+  .divider {
+    width: 60%;
   }
 }

@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./heroBanner.module.css";
-import Img, { FluidObject } from "gatsby-image";
+import Img from "gatsby-image";
 import { useStaticQuery, graphql } from "gatsby";
 import { data } from "../../types/data";
 

@@ -47,18 +47,20 @@ const Services: React.FC = () => {
   });
 
   return (
-    <div className={styles.container}>
+    <div id="services" className={styles.container}>
       <h1 className={styles.title}>Toll Services</h1>
-      <hr />
-      {serviceData.map(({ title, description, fluid }) => (
-        <div key={title} className={styles.servicesContainer}>
-          <Img alt={title} fluid={fluid} />
-          <h2>{title}</h2>
-          <div className={styles.description}>
-            <p>{description}</p>
+      <hr className={styles.divider} />
+      <div className={styles.servicesContainer}>
+        {serviceData.map(({ title, description, fluid }) => (
+          <div key={title} className={styles.servicesCard}>
+            <Img alt={title} fluid={fluid} />
+            <h2>{title}</h2>
+            <div className={styles.description}>
+              <p>{description}</p>
+            </div>
           </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 };
