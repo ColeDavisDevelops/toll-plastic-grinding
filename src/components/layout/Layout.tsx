@@ -2,27 +2,27 @@ import React, { useEffect, useState } from "react";
 import { Link } from "gatsby";
 import styles from "./layout.module.css";
 
-const getWindowDimensions = () => {
-  const { innerWidth: width, innerHeight: height } = window;
-  return {
-    width,
-    height,
-  };
-};
-
 interface layoutProps {
   children: object;
 }
 
 const Layout: React.FC<layoutProps> = ({ children }) => {
-  const [windowDimensions, setWindowDimensions] = useState(
-    getWindowDimensions()
-  );
+  const [windowDimensions, setWindowDimensions] = useState({
+    width: null,
+    height: null,
+  });
   const [currYOffset, setCurrYOffset] = useState<number>(0);
   const [navState, setNavState] = useState<string>("transparent");
   const [menuIconActive, setMenuIconActive] = useState<boolean>(false);
 
   useEffect(() => {
+    const getWindowDimensions = () => {
+      const { innerWidth: width, innerHeight: height } = window;
+      return {
+        width,
+        height,
+      };
+    };
     window.onscroll = e => {
       const yOffset: number = e.path[1].pageYOffset;
       if (yOffset < currYOffset) setNavState("showing");
