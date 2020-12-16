@@ -54,7 +54,9 @@ const Gallery: React.FC = () => {
 
   return (
     <div id="gallery" className={styles.container}>
-      <Carousel>
+      <h1 className={styles.title}>Gallery</h1>
+      <hr className={styles.divider} />
+      <Carousel className={styles.carousel}>
         {galleryData.map(({ imgAlt, fluid }: galleryDataNode, idx) => (
           <Carousel.Item key={idx} interval={1000}>
             <Img fluid={fluid} alt={imgAlt} />

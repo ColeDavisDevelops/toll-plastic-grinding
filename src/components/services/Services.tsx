@@ -15,13 +15,13 @@ const Services: React.FC = () => {
     {
       title: "Shredding & Grinding",
       description:
-        "Our expertise lies in processing large volume orders. We focus on providing a consistent product at a fast turnaround rate. We are machined to reduce large raw materials into granular forms and will come up with innovative ways to process forms of material that others will not!",
+        "Our business specializes in fulfilling large volume grinding orders. We focus on producing a consistent plastic granular at a fast turnaround rate. Furthermore, all orders get handled carefully to prevent contamination. We have millions of pounds of experience shredding and grinding plastic and have developed ways to process forms of material others will not!",
       fluid: null,
     },
     {
       title: "Pelletizing",
       description:
-        "With our plant equipped to pelletize, we are able to offer our clients the ability to have their raw materials processed all the way down to a process-able pellet. Whether you have regrind that needs processing or raw materials that need to be shred, ground and pelletized, we are a one stop shop.",
+        "In addition to shredding and grinding services, we also offer our clients the ability to pelletize their material. We have twin screw and single screw extruders working 24/7, producing re-processable plastic pellets. Our lab ensures the properties of your plastic are within specified ranges.",
       fluid: null,
     },
   ];

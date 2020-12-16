@@ -11,21 +11,22 @@ const About: React.FC = () => {
           Thirty years of plastic processing experience
         </h2>
         <p>
-          We have thirty years of industry experience. We have thirty years of
-          industry experience. We have thirty years of industry experience. We
-          have thirty years of industry experience. We have thirty years of
+          We have delivered and fine-tuned plastic shredding, grinding,
+          pelletizing, and densifying services for thirty years.
         </p>
         <h2 className={styles.bulletTitle}>Large processing capacity</h2>
         <p>
-          We have thirty years of industry experience. We have thirty years of
-          industry experience. We have thirty years of industry experience. We
-          have thirty years of industry experience. We have thirty years of
+          When it comes to manufacturing, we are obsessed. Our plant can process
+          large volumes of plastic material in many different ways. We maximize
+          efficiency and make sure our machines are happy around the clock! If
+          you have a significant amount of material that needs consistent
+          processing, our team delivers.
         </p>
-        <h2 className={styles.bulletTitle}>Consistent Procedures</h2>
+        <h2 className={styles.bulletTitle}>Innovative Procedures</h2>
         <p>
-          We have thirty years of industry experience. We have thirty years of
-          industry experience. We have thirty years of industry experience. We
-          have thirty years of industry experience. We have thirty years of
+          Our engineering team has consistently devised strategies to create
+          value for plastic parts manufacturers. We have found ways to process
+          materials that others will not!
         </p>
       </div>
     </div>

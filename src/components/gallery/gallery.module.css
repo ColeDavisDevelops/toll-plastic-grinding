@@ -1,6 +1,19 @@
-.container {
-}
-
 .title {
   text-align: center;
+}
+@media screen and (min-width: 720px) {
+  .container {
+    padding-top: 40px;
+    padding-bottom: 60px;
+    background-color: greenyellow;
+  }
+
+  .carousel {
+    width: 50%;
+    margin: auto;
+  }
+
+  .divider {
+    width: 60%;
+  }
 }

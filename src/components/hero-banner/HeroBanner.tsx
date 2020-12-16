@@ -1,8 +1,8 @@
 import React from "react";
 import styles from "./heroBanner.module.css";
-import Img from "gatsby-image";
 import { useStaticQuery, graphql } from "gatsby";
 import { data } from "../../types/data";
+import BackgroundImage from "gatsby-background-image";
 
 const HeroBanner: React.FC = () => {
   const data: data = useStaticQuery(graphql`
@@ -20,7 +20,7 @@ const HeroBanner: React.FC = () => {
 
   return (
     <div className={styles.container}>
-      <Img className={styles.image} fluid={fluid} alt="processed plastic" />
+      <BackgroundImage className={styles.image} fluid={fluid} />
       <div className={styles.textContainer}>
         <h1 className={styles.title}>
           Plastic Grinding, Shredding & Pelletizing Services
@@ -29,7 +29,7 @@ const HeroBanner: React.FC = () => {
           We have over 20 years of experience shredding, grinding, and
           pelletizing plastic.
         </h2>
-        <button className={styles.button}>CONTACT US</button>
+        <a className={styles.button}>CONTACT US</a>
       </div>
       <div className={styles.iconScroll}></div>
     </div>

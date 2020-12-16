@@ -34,3 +34,28 @@
 .input:focus {
   box-shadow: 0 0 0 2px rgb(130, 207, 15);
 }
+
+@media screen and (min-width: 720px) {
+  .container {
+    padding-top: 40px;
+    padding-bottom: 60px;
+    padding-left: 20%;
+    padding-right: 20%;
+  }
+  .form-container {
+    display: flex;
+    width: 1000px;
+    margin: auto;
+  }
+
+  .form-heading {
+    width: 300px;
+    flex-grow: 1;
+    margin-left: 50px;
+    margin-top: 10px;
+  }
+  .form {
+    width: 500px;
+    margin-right: 50px;
+  }
+}

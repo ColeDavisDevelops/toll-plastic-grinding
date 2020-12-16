@@ -17,6 +17,10 @@
 
 .image {
   height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .text-container {
@@ -37,9 +41,11 @@
 }
 
 .button {
+  color: black;
   border: 0px;
+  padding: 10px;
+  background: white;
   font-size: 20px;
-  width: 170px;
   border-radius: 10px;
   font-family: Impact, sans-serif;
 }
