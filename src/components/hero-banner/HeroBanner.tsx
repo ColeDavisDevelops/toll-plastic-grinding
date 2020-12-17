@@ -29,7 +29,7 @@ const HeroBanner: React.FC = () => {
           We have over 20 years of experience shredding, grinding, and
           pelletizing plastic.
         </h2>
-        <a className={styles.button}>CONTACT US</a>
+        <a className={styles.button} href="#contact">CONTACT US</a>
       </div>
       <div className={styles.iconScroll}></div>
     </div>
