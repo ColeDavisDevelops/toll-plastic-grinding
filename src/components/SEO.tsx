@@ -26,8 +26,6 @@ const SEO: React.FC = () => {
     url: `${siteUrl}${pathname}`,
   };
 
-  console.log(seo);
-
   return (
     <Helmet title={seo.title}>
       <meta name="description" content={seo.description} />

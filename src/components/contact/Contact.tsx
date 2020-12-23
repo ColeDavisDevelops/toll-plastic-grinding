@@ -34,7 +34,6 @@ const Contact: React.FC = () => {
           data-netlify="true"
         >
           <input type="hidden" name="contact" value="contact" />
-
           <Form.Group controlId="formBasicName">
             <InputGroup>
               <InputGroup.Prepend>
