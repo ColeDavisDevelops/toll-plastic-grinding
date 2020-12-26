@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./contact.module.css";
 import { BsFillPersonFill } from "react-icons/bs";
 import { FaBuilding } from "react-icons/fa";
@@ -12,6 +12,13 @@ const Contact: React.FC = () => {
     <div id="contact" className={styles.container}>
       <h1 className={styles.title}>Contact Us</h1>
       <hr />
+      <iframe
+        width="600"
+        height="450"
+        style={{ border: 0 }}
+        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyB6hEZq-24lGc_XMeO_PNKHjXkKg9ua3_o
+    &q=Toll+Plastic+Grinding,Houston+TX"
+      ></iframe>
       <div className={styles.formContainer}>
         <div className={styles.formHeading}>
           <div>
