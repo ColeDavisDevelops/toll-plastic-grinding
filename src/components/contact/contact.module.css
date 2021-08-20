@@ -35,13 +35,22 @@
   box-shadow: 0 0 0 2px rgb(130, 207, 15);
 }
 
-@media screen and (min-width: 720px) {
+.map-container {
+  margin-bottom: 10px;
+}
+
+@media screen and (min-width: 900px) {
   .container {
     padding-top: 40px;
     padding-bottom: 60px;
-    padding-left: 20%;
-    padding-right: 20%;
   }
+
+  .map-container {
+    margin: auto;
+    margin-bottom: 50px;
+    max-width: 1000px;
+  }
+
   .form-container {
     display: flex;
     width: 1000px;

@@ -2,12 +2,6 @@
   text-align: center;
 }
 @media screen and (min-width: 720px) {
-  .container {
-    padding-top: 40px;
-    padding-bottom: 60px;
-    background-color: #adff2f;
-  }
-
   .carousel {
     width: 50%;
     margin: auto;
